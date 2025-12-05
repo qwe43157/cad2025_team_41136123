@@ -55,7 +55,13 @@
 <p style="padding-left: 30px;">2a 上課時段: 每週五 13:20 - 16:10 (w5 10/10 國慶日放假, w7 10/24 光復節補假, w11 11/21 全校運動會)</p>
 <p style="padding-left: 30px;">2b 上課時段: 每週二 09:10 - 12:00</p>
 <h1>HomeWork</h1>
-<h2>成員與工作分配</h2>
+<p><span>學習心得報告主題:</span></p>
+<p>w3: 用什麼套件完成<span> </span><a href="https://youtu.be/iOLFP90DneY">5-bar Linkage Plotter</a><span> </span>與<span> </span><a href="https://mde.tw/cad2025/content/OpenDuck.html">Openduck mini</a><span> </span>零組件設計繪圖？<span> </span><a href="https://solvespace.com/">Solvespace</a>,<span> </span><a href="https://plm.sw.siemens.com/en-US/nx/cad-online/">Siemens NX</a>,<span> </span><a href="https://www.onshape.com/en/">Onshape</a><span> </span>或其他？各有什麼優缺點？ (<a href="https://mde.tw/cad2025/downloads/plotter.7z">plotter.7z</a>,<span> </span><a href="https://mde.tw/cad2025/downloads/open_duck_mini.7z">open_duck_mini.7z</a>)</p>
+<p>w7 (<span>2a 採 Youtube 影片簡報</span>):<span> </span><a href="https://youtu.be/iOLFP90DneY">5-bar Linkage Plotter</a><span> </span>與<span> </span><a href="https://mde.tw/cad2025/content/OpenDuck.html">Openduck mini</a> 零組件設計繪製完成之後，如何切割零件? 為何要切割零件？ 如何利用<span> </span><a href="https://cyberbotics.com/">Webots</a><span> </span>進行後續的控制系統設計與動態模擬 (Dynamic Simulation)？(<a href="https://mde.tw/cad2025/downloads/plotter_project.7z">plotter_project.7z</a>)</p>
+<p>w10:<span> </span><a href="https://cyberbotics.com/">Webots</a><span> </span>是什麼？有什麼特點？ 如何進行場景模擬？ 如何用 Python 進行控制系統設計？ (<a href="https://cyberbotics.com/doc/guide/tutorials">Tutorial</a>)</p>
+<p>w14:<span> </span><a href="https://cyberbotics.com/">Webots</a><span> </span>的模型有沒有辦法用程式方法建立? 有沒有辦法直接從 CAD 套件中轉出<span> </span><a href="https://cyberbotics.com/">Webots</a><span> </span>的場景模型？</p>
+<p>w17: 如何實作一套<span> </span><a href="https://youtu.be/iOLFP90DneY">5-bar Linkage Plotter</a><span> </span>與<span> </span><a href="https://mde.tw/cad2025/content/OpenDuck.html">Openduck mini</a>？(<a href="https://la.disneyresearch.com/publication/design-and-control-of-a-bipedal-robotic-character/">Disney Bipedal Robot</a>)</p>
+<p>w18: 課程總結</p><h2>成員與工作分配</h2>
 <p>成員:</p>
 <ol>
 <li>41323107<span>：</span>王瑞億</li>
@@ -199,9 +205,12 @@
 </tr>
 </tbody>
 </table>
-<p><span>Q3.如何進行場景模擬？ </span></p>
+<p><span>Q3.如何進行場景模擬？</span></p>
+<p><span>首先需要建立robot-&gt;solid-&gt;shape</span></p>
 <p><span>Q4.如何用 Python 進行控制系統設計？ (</span><a href="https://cyberbotics.com/doc/guide/tutorials">Tutorial</a><span>)</span></p>
-<p></p><h2>W14</h2>
+<h3>組裝的邏輯理念</h3>
+<p>1.建立<span>Robot</span>的原因是需要<span>controller</span>使用<span>code</span>控制，但凡遇到任何需要<span>controller</span>的都是建立<span>Robot</span></p>
+<p>2.children裡面的東西會跟著一起動。以您的手臂舉例，上臂與前臂是由同一關節組成，這意味著兩者相互影響，如果您要舉起手，需要將上臂往上舉，則前臂會跟隨一起往上舉，所以前臂應建立在上臂的<span>children</span>內。以電腦來說，因為上臂的終點是肘手關節，前臂的起點是手肘關節，因為在同一層級下則需重新計算對應位置，消耗算力十分沒有必要的，因此前臂直接建立在上臂的<span>children</span>內，相對於上臂控制即可。</p><h2>W14</h2>
 <h2>W17</h2>
 <h2>W18</h2>
 <h1>Note</h1>
